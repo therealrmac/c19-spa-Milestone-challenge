@@ -1,0 +1,26 @@
+{
+	"cars":[
+		{
+		"make": "Honda",
+		"model": "Civic",
+		"year": "2009",
+		"price": "9000",
+		"description": "Refurbished vehicle from a previous owner that only used it to drive to work. New ties, new floorboard, a great purchase."
+		},
+		{
+		"make": "Ford",
+		"model": "Escort",
+		"year": "20011",
+		"price": "9600",
+		"description": "A bit of high milage but at 30+ mtg highway you can't be too disapointed, the upholstery has been re-sealed and ready to go."
+		},
+		{
+		"make": "Nissan",
+		"model": "Altima",
+		"year": "2002",
+		"price": "8700",
+		"description": "Perfectly maintained vehicle with low milage for its age. The catalytic converter and alternator have been replaced."
+		}
+
+	]
+}

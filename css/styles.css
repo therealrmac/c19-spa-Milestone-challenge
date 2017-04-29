@@ -1,0 +1,18 @@
+.card {
+	border: 2px solid black;
+	max-width: 60%;
+	margin: 0 auto;
+	padding: 10px 10px;
+}
+.card h4,span{
+	text-align: center;
+	margin-left: 50px;
+}
+#span{
+	margin-bottom: 25%;
+}
+.selected{
+	border: 2px solid blue;
+	max-width: 80%;
+	margin: 0 auto;
+}

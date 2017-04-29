@@ -3,17 +3,17 @@ var CarLot= (function(CarLot){
 	var cars=[];
 
 	return {
-		loadInventory: function(event){
-			var loader= new XMLHttpRequest();
-			loader.addEventListener('load', function(){
-				cars= JSON.parse(this.resonseText).cars;
-				event(cars);
-				loader.send();
+		loadInventory: function(callbackToInvoke){
+			var inventoryLoader= new XMLHttpRequest();
+			inventoryLoader.addEventListener('load', function(){
+				cars= JSON.parse(this.responseText).cars;
+				callbackToInvoke(cars);
 			});
-			loader.open('GET', 'inventory.json');
+			inventoryLoader.open('GET', 'inventory.json');
 			console.log('carlot has loaded');
+			inventoryLoader.send();
 		}
 
-	}
+	};
 	return CarLot;
-}(Carlot || {}));
+}(CarLot || {}));

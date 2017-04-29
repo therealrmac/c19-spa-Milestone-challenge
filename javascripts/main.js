@@ -3,22 +3,11 @@ var carElement= document.getElementsByClassName('card');
 var input= document.getElementById('input');
 var select="";
 var output= document.getElementById('output');
-var carRequest= new XMLHttpRequest;
 
-carRequest.addEventListener('load', carRequestLoad);
-carRequest.addEventListener('error', carRequestFail);
-
-function carRequestLoad(event){
-	console.log('carRequest has loaded');
-	var cars= JSON.parse(this.responseText);
-	carCard(cars);
-}
-function carRequestFail(event){
-	console.log('An error has occured');
-}
-function carCard(x){
+function populatePage (cars) {
+	console.log(populatePage);
 	var divContent;
-	var card= x.cars;
+	var card= cars;
 	for (var i=0; i< card.length; i++){
 		console.log(card[i]);
 		divContent= "<div class='card'>" +
@@ -34,29 +23,14 @@ function carCard(x){
 						+"</div>";
 		output.innerHTML += divContent;
 	}
-	for (var i=0; i<carElement.length; i++){
-	console.log(carElement[i]);
-	carElement[i].addEventListener('click', function(event){
-		event.target.closest('div').classList.toggle('selected');
-		select= event.target.closest('div').querySelector('.descrip');
-		console.log('select',select);
-		input.focus();
-		input.addEventListener('keyup', function(event){
-    	select.innerHTML= event.target.value;
-    	 if(event.keyCode ===13){
-            select= input
-            input.value= "";
-        }
-    });
-	});
-};
-
+  CarLot.activeEvents(populatePage);
 }
+CarLot.loadInventory(populatePage);
 
-carRequest.open('GET', "inventory.json");
-carRequest.send();
+// Load the inventory and send a callback function to be
+// invoked after the process is complete
 
-CarLot.carCard()
+
 
 
 

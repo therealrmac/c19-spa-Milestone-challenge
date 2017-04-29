@@ -1,6 +1,6 @@
 # Single Page Application milestone challenge
 
-*First upload just to get some things on Github. The first part is complete, just got some things to work out*
+*Second upload, now the whole first part of the challenge works. Working on the second part now (creating two iife files), wish me luck*
 
 
 1. Create an array of cars in the `inventory.json` file (see example structure below). Put at least three cars in the array.

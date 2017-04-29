@@ -34,12 +34,7 @@ function carCard(x){
 						+"</div>";
 		output.innerHTML += divContent;
 	}
-}
-
-carRequest.open('GET', "inventory.json");
-carRequest.send();
-
-for (var i=0; i<carElement.length; i++){
+	for (var i=0; i<carElement.length; i++){
 	console.log(carElement[i]);
 	carElement[i].addEventListener('click', function(event){
 		event.target.closest('div').classList.toggle('selected');
@@ -56,6 +51,12 @@ for (var i=0; i<carElement.length; i++){
 	});
 };
 
+}
+
+carRequest.open('GET', "inventory.json");
+carRequest.send();
+
+CarLot.carCard()
 
 
 

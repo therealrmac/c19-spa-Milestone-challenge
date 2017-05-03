@@ -8,9 +8,11 @@ function populatePage (cars) {
 	console.log(populatePage);
 	var divContent;
 	var card= cars;
+	var counter=1;
 	for (var i=0; i< card.length; i++){
 		console.log(card[i]);
-		divContent= "<div class='card'>" +
+		divContent= "<br>"+
+		"<div class='card'>" +
 						"<h2>" +card[i].make+ "</h2>" +
 						"<hr>"+
 						"<span>"+ "Make: " +card[i].model+ "</span>" +
@@ -24,6 +26,7 @@ function populatePage (cars) {
 		output.innerHTML += divContent;
 	}
   CarLot.activeEvents(populatePage);
+  CarLot.removeEvents(populatePage);
 }
 CarLot.loadInventory(populatePage);
 

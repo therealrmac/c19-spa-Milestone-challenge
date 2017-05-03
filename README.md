@@ -1,6 +1,6 @@
 # Single Page Application milestone challenge
 
-*Third upload and it is going so smoothly, everything is coming together and making sense. I just have one more iife file to make to handle the onclick DOM elements and then it'll be 100% done*
+*Possibly complete*
 
 
 1. Create an array of cars in the `inventory.json` file (see example structure below). Put at least three cars in the array.
